@@ -15,6 +15,9 @@ whitelist.txt，白名单，格式是一行是一个组合，中间用空格分�
 
 blockip.sh，将命令流用bash的形式写出，先查找IP，再过滤IP并写入到ipset中，最后重启防火墙，使列表生效。
 
+### 使用说明：
+将代码和whitelist.txt上传到/root目录，并将frps日志的路径在代码中进行修改。然后运行blockip.sh。
+
 
 ## English Readme：
 Attempt to use a firewall with LEDE (openwrt) routing to block illegal connections.
