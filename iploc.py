@@ -113,12 +113,12 @@ def getLogName():
           
  
 if __name__ == "__main__":
-    logname='/mnt/sda3/log/'+getLogName()
+    logname='/mnt/sda3/log/'+getLogName() #edit this path
     print(logname)
     try:
         f=open(logname)
     except:
-        logname='/mnt/sda3/log/frps.log'
+        logname='/mnt/sda3/log/frps.log' #and this path
         print(logname)
         f=open(logname)
 
