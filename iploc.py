@@ -153,10 +153,10 @@ if __name__ == "__main__":
                 print("time out get again")
                 time.sleep(2)
                 
-        print(line)
+        print(line.encode('utf-8')) #为了让openwrt中能正常的打印结果到终端
         if line.find(a)<0:
             f.write(line.encode('utf-8')+'\n')
-	else:
+        else:
             f_cn.write(line.encode('utf-8')+'\n')
 
         time.sleep(2)
