@@ -2,6 +2,7 @@
 #coding:utf-8
 import ipaddress
 import time
+from insub import *
 def check(ip,subnet):
 	ip=ipaddress.ip_address(unicode(ip))
 	subnet=ipaddress.ip_network(unicode(subnet))
@@ -114,3 +115,7 @@ def checkip2(filename):
 
 checkip("ip-check.txt")
 checkip2("ip-check-cn.txt")
+repfile() #copy a file named firewall.u from a bakupfile of firewall.user named firewall.userbak to local path, in which contains other rules
+RE=getIP() #read IP and subnet from firewall.user
+add2ipset2(CountIPs(RE[0],RE[1])) #add rules to firewall.u in local path
+repfire()# replace the copyed file to /etc/firewall.user
