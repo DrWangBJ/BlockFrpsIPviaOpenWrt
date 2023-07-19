@@ -130,7 +130,7 @@ if __name__ == "__main__":
 	#isssh=log.find("[ssh")
         #if connId>0 and isssh>0:
         if connId>0:
-            log=log[connId+12:15+connId+12]
+            log=log[connId+12:16+connId+12] # to get the full ip string, change 15 to 16
             connId=log.find(":")
             log=log[0:connId]
             #print(log)
